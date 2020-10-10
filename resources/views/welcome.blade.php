@@ -86,6 +86,7 @@
 
                 <div class="links">
                     <a href="{{ route('products.index') }}">Products</a>
+                    <a href="{{ route('testvue') }}">Test Vue</a>
                 </div>
             </div>
         </div>

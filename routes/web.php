@@ -5,6 +5,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/testvue', function () {
+    return view('test-vue');
+}) -> name('testvue');
+
 Auth::routes();
 
 // Guests

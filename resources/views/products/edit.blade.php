@@ -90,10 +90,7 @@
 
                     <div class="form-group">
                       <label for="desc">Desc</label>
-                      <textarea class="form-control @error('desc') is-invalid @enderror" name="desc" rows="8" cols="80"  required>{{ old('desc') }}
-                        @isset($prod)
-                          {{ $prod -> desc }}
-                        @endisset
+                      <textarea class="form-control @error('desc') is-invalid @enderror" name="desc" rows="8" cols="80"  required>{{ old('desc') }}@isset($prod){{ $prod -> desc }}@endisset
                       </textarea>
                       @error('desc')
                           <span class="invalid-feedback" role="alert">
