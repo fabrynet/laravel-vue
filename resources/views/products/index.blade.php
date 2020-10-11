@@ -22,6 +22,7 @@
                       <productcomponent
                         :name="'{{ $prod -> name }}'"
                         :short_desc="'{{ $prod -> short_desc }}'"
+                        :desc="'{{ $prod -> desc }}'"  
                         :img="'{{ $prod -> img }}'"
                         :id="'{{ $prod -> id }}'"
 
