@@ -49527,6 +49527,27 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
+function initComponent() {
+  Vue.component('testcomponent', {
+    template: '<h1 v-on:mouseover="getRealName()" v-on:mouseout="getUserName()">Custom template designed by {{ name }}</h1>',
+    data: function data() {
+      return {
+        realName: 'Fabrizio',
+        userName: 'Fabrynet',
+        name: 'Fabrizio'
+      };
+    },
+    methods: {
+      getRealName: function getRealName() {
+        this.name = this.realName;
+      },
+      getUserName: function getUserName() {
+        this.name = this.userName;
+      }
+    }
+  });
+}
+
 function initVue() {
   // avvio di Vue sul componente <div id='app'>
   // ModelView, variabile globale app
@@ -49594,6 +49615,7 @@ function initVue() {
 }
 
 function init() {
+  initComponent();
   initVue();
 }
 

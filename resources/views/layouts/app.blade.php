@@ -10,7 +10,8 @@
     <title>Laravel Vue</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {{-- attributo "defer" indica se lo script js deve essere eseguito alla fine del parsing della pagina o meno--}}
+    <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,6 +21,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+
+  @include('components.testcomponent')
+  @include('components.product')
+
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">

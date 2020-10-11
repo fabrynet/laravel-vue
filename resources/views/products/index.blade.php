@@ -19,7 +19,14 @@
                   <div class="d-flex flex-wrap justify-content-around">
 
                     @foreach ($prods as $prod)
-                      <div class="card mb-3" style="width: calc(25% - 10px);">
+                      <productcomponent
+                        :name="'{{ $prod -> name }}'"
+                        :short_desc="'{{ $prod -> short_desc }}'"
+                        :img="'{{ $prod -> img }}'"
+                        :id="'{{ $prod -> id }}'"
+
+                      ></productcomponent>
+                      {{-- <div class="card mb-3" style="width: calc(25% - 10px);">
                         <img class="card-img-top" src="{{ $prod -> img }}" alt="Product Image">
                         <div class="card-body">
                           <h5 class="card-title">{{ $prod -> name }}</h5>
@@ -28,7 +35,7 @@
                           </p>
                           <a href="{{ route('products.show', $prod -> id) }}" class="btn btn-primary">Show</a>
                         </div>
-                      </div>
+                      </div> --}}
                     @endforeach
                   </div>
 

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-md-8">
@@ -67,11 +68,20 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="km">KM</label>
+                      <label for="km">Km</label>
                       <input id="km" type="number" v-model="km">
                       <label for="m">m</label>
                       <input id="m" type="number" v-model="m">
                     </div>
+
+                    <testcomponent></testcomponent>
+
+                    <outtestcomponent
+                      :text="'Hello World from outtestcomponent'"
+                    ></outtestcomponent>
+                    <outtestcomponent
+                      :text="'Ciao Mondo da outtestcomponent'"
+                    ></outtestcomponent>
 
                   </div>
 
@@ -79,4 +89,5 @@
           </div>
       </div>
   </div>
+
 @endsection
